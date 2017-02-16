@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void CheckInp (int n, int m);
+
 int main()
 {
   int a;
@@ -12,4 +14,14 @@ int main()
   
   return (0);
 }
- 
+
+void CheckInp (int n, int m)
+{
+  if (b<10000) {
+    printf("Deposit amount is incorrected");
+  }
+  if (a<0 || a>365) {
+    printf ("number days is incorrected");
+  }
+}
+
