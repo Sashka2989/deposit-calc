@@ -2,6 +2,8 @@
 
 void CheckInp (int n, int m);
 
+void CheckSum (int n, int m);
+
 int main()
 {
   int a;
@@ -26,3 +28,7 @@ void CheckInp (int n, int m)
   }
 }
 
+void CheckSum (int n, int m)
+{
+
+}
