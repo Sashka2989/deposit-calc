@@ -30,5 +30,18 @@ void CheckInp (int n, int m)
 
 void CheckSum (int n, int m)
 {
-
+if (n < 100000) {
+		if (m >= 0 && m <= 30) {
+			n = n - (n * 10 / 100);
+		}
+		if (m >= 31 && m <= 120) {
+			n = n + (n * 2 / 100);
+		}
+		if (m >= 121 && m < 240) {
+			n = n + (n * 6 / 100);
+		}
+		if (m >= 241 && m <= 365) {
+			n = n + (n * 12 / 100);
+		}
+	}
 }
