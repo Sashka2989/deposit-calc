@@ -37,7 +37,7 @@ void CheckSum (int n, int m)
         if (m >= 31 && m <= 120) {
 	    n = n + (n * 2 / 100);
         }
-        if (m >= 121 && m < 240) {
+        if (m >= 121 && m <= 240) {
             n = n + (n * 6 / 100);
         }
         if (m >= 241 && m <= 365) {
@@ -57,4 +57,5 @@ void CheckSum (int n, int m)
             n = n + (n * 15 / 100);
         }
     } 
+    printf("The amount for the period of %d days: %li \n", m, n);
 }
