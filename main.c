@@ -1,29 +1,28 @@
 #include <stdio.h>
 
 void CheckInp (int n, int m);
-
 void CheckSum (int n, int m);
 
 int main()
 {
     int a;
-    long int b;
+    int b;
 
     printf("Enter the deposit amount: ");
-    scanf("%li",&b);
+    scanf("%d", &b);
     printf("Enter the number days less then 365: ");
-    scanf("%d",&a);
-    
-    CheckInp (b,a);
+    scanf("%d", &a);
+    CheckInp(b, a);
+    CheckSum(b, a);
     return (0);
 }
 
 void CheckInp (int n, int m)
 {
-    if (n<10000) {
+    if (n < 10000) {
         printf("Deposit amount is incorrected\n");
     }
-    if (m<0 || m>365) {
+    if (m < 0 || m > 365) {
         printf ("number days is incorrected\n");
     }
 }
@@ -43,7 +42,7 @@ void CheckSum (int n, int m)
         if (m >= 241 && m <= 365) {
             n = n + (n * 12 / 100);
         }
-    }else {
+    } else {
         if (m >= 0 && m <= 30) {
             n = n - (n * 10 / 100);
         }
@@ -56,6 +55,6 @@ void CheckSum (int n, int m)
         if (m >= 241 && m <= 365) {
             n = n + (n * 15 / 100);
         }
-    } 
-    printf("The amount for the period of %d days: %li \n", m, n);
+    }
+    printf("The amount for the period of %d days: %d \n", m, n);
 }
