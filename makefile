@@ -1,11 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Werror -MP -MMD
+
 bin/deposit-calc : build/main.o build/deposit.o
-	gcc build/main.o build/deposit.o -o bin/deposit-calc -Wall -Werror
+	$(CC) $(CFLAGS) build/main.o build/deposit.o -o bin/deposit-calc 
 
 build/main.o: src/main.c
-	gcc -c src/main.c -o build/main.o -Wall -Werror -MP -MMD
+	$(CC) $(CFLAGS) -c src/main.c -o build/main.o
 
-build/deposit.o : src/deposit.c
-	gcc -c src/deposit.c -o build/deposit.o -Wall -Werror -MP -MMD
+build/deposit.o : src/deposit.c src/deposit.h
+	$(CC) $(CFLAGS) -c src/deposit.c -o build/deposit.o 
 
 clean:
 	rm -rf bin/deposit-calc
