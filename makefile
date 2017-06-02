@@ -1,3 +1,4 @@
+.PHONY: clean all
 CFLAGS = -Wall -Werror -MP -MMD
 
 all: bin/deposit-calc
