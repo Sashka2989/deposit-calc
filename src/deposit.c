@@ -1,16 +1,17 @@
 #include <stdio.h>
 
-void CheckInp (int sum, int days)
+int CheckInp (int sum, int days)
 {
     if (sum < 10000) {
-        printf("Deposit amount is incorrected\n");
-    }
+		return 0;
+	}
     if ((days < 0) || (days > 365)) {
-        printf ("number days is incorrected\n");
-    }
+		return 0;
+	}
+	return 1;
 }
 
-void CheckSum (int sum, int days)
+int CheckSum (int sum, int days)
 {
     if (sum < 100000) {
         if ((days >= 0) && (days <= 30)) {
@@ -39,5 +40,5 @@ void CheckSum (int sum, int days)
             sum = sum + (sum * 15 / 100);
         }
     }
-    printf("The amount for the period of %d days: %d \n", days, sum);
+	return sum;
 }

@@ -3,4 +3,5 @@
 /bin/
 !/bin/.gitkeep
 !/build/.gitkeep
+!/build/test/.gitkeep
 .#*
